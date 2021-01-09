@@ -1,0 +1,14 @@
+{
+  "name": "fuse-shader-playground",
+  "private": true,
+  "devDependencies": {
+    "fuse-sdk": "^2.0.0-beta.4"
+  },
+  "scripts": {
+    "android": "uno build android --run",
+    "ios": "uno build ios --run",
+    "dotnet": "uno build dotnet --run",
+    "native": "uno build native --run",
+    "clean": "uno clean"
+  }
+}
