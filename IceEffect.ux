@@ -94,7 +94,7 @@
 			<BufferUniform Buffer="HeatBuffer" UniformName="HeatTex" />
 			<ImageUniform File="Assets/icecracks.png" UniformName="CracksTex" />
 			<ImageUniform File="Assets/icecolor.png" UniformName="ColorTex" />
-			<ImageUniform Url="http://www.babylonpuzzles.com/6866-thickbox_default/500-pcs---curious-kitten---square-by-ravensburger.jpg" UniformName="PictureTex" />
+			<ImageUniform File="Assets/500-pcs---curious-kitten---square-by-ravensburger.jpg" UniformName="PictureTex" />
 
 			<Code ux:Binding="VertexCode">
 				uniform mat4 LocalToClipMatrix;

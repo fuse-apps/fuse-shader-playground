@@ -52,7 +52,7 @@
 
 		<Pass Target="FeedbackBuffer">
 			<BufferUniform Buffer="WorkBuffer" UniformName="FeedbackTex" />
-			<ImageUniform Url="http://farm5.static.flickr.com/4127/5012570728_2000a77565.jpg" UniformName="PictureTex" />
+			<ImageUniform File="Assets/5012570728_2000a77565.jpg" UniformName="PictureTex" />
 
 			<FloatUniform ux:Name="Scale" UniformName="Scale" />
 			<FloatUniform ux:Name="Rotation" UniformName="Rotation" />
@@ -133,7 +133,7 @@
 			<SizeUniform UniformName="Size" />
 
 			<BufferUniform Buffer="FeedbackBuffer" UniformName="FeedbackTex" />
-			<ImageUniform Url="http://farm5.static.flickr.com/4127/5012570728_2000a77565.jpg" UniformName="PictureTex" />
+			<ImageUniform File="Assets/5012570728_2000a77565.jpg" UniformName="PictureTex" />
 
 			<FloatUniform ux:Name="PointerFade2" UniformName="PointerFade" Value="0" />
 

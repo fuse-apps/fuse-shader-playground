@@ -175,7 +175,7 @@
 			<SizeUniform UniformName="Size" />
 
 			<BufferUniform Buffer="DisplacementLightBuffer" UniformName="DisplacementLightTex" />
-			<ImageUniform Url="https://www.geokitten.com/i/10.jpg" UniformName="PictureTex" />
+			<ImageUniform File="Assets/10.jpg" UniformName="PictureTex" />
 
 			<Code ux:Binding="VertexCode">
 				uniform mat4 LocalToClipMatrix;
