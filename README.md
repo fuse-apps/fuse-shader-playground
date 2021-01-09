@@ -2,7 +2,26 @@
 
 This is a showcase for `ShaderControl`, a control that provides a [shadertoy](https://www.shadertoy.com/)-like workflow for playing with and displaying shader effects in UX markup.
 
-![Demo](https://github.com/yupferris/fuse-shader-playground/blob/master/demo.gif)
+![Demo](https://github.com/fuse-apps/fuse-shader-playground/blob/master/demo.gif)
+
+## Usage
+
+> This project can be opened in [fuse X](https://fuse-x.com), or follow the instructions to build from command-line.
+
+First, install dependencies (Fuse SDK) via NPM.
+
+```shell
+npm install
+```
+
+Then, run one of the following commands to run the app on your desired platform(s).
+
+```shell
+npm run android
+npm run ios
+npm run dotnet
+npm run native
+```
 
 ## How it Works
 
