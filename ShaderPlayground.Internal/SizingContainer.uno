@@ -99,7 +99,7 @@ namespace ShaderPlayground.Internal
 		
 		float2 SnapSize( float2 sz )
 		{
-			return Math.Round(sz* absoluteZoom) / absoluteZoom;
+			return Math.Floor(sz * absoluteZoom + 0.5f) / absoluteZoom;
 		}
 		
 		float2 CalcScale( float2 availableSize, float2 desiredSize,

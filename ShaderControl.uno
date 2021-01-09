@@ -10,6 +10,7 @@ using ShaderPlayground.Internal;
 using Uno;
 using Uno.Collections;
 using Uno.Graphics;
+using Uno.Runtime.InteropServices;
 using Uno.UX;
 
 public class Code : Node
@@ -680,7 +681,7 @@ public class ShaderControl : LayoutControl
 				float2(0, 0),
 			};
 
-			var vb = new Buffer(verts.Length * sizeof(float2));
+			var vb = new byte[verts.Length * sizeof(float2)];
 			for (int i = 0; i < verts.Length; i++)
 				vb.Set(i * sizeof(float2), verts[i]);
 
@@ -975,12 +976,14 @@ extern(OPENGL) public class StaticVertexBuffer : IDisposable
 
 	bool _isDisposed;
 
-	public StaticVertexBuffer(Buffer data)
+	public StaticVertexBuffer(byte[] data)
 	{
 		_handle = GL.CreateBuffer();
+		var pin = GCHandle.Alloc(data, GCHandleType.Pinned);
 		GL.BindBuffer(GLBufferTarget.ArrayBuffer, _handle);
-		GL.BufferData(GLBufferTarget.ArrayBuffer, data, GLBufferUsage.StaticDraw);
+		GL.BufferData(GLBufferTarget.ArrayBuffer, data.Length, pin.AddrOfPinnedObject(), GLBufferUsage.StaticDraw);
 		GL.BindBuffer(GLBufferTarget.ArrayBuffer, GLBufferHandle.Zero);
+		pin.Free();
 	}
 
 	public void IDisposable.Dispose()
